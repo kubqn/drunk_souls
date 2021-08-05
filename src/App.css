@@ -1,38 +1,105 @@
-.App {
+html {
+  background: url(background.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  top: 35%;
+  left: 40%;
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  font-weight: 100;
+  color: #fff;
+}
+
+.margin {
+  margin-top: 5%;
+}
+
+.modalAlarm {
+  display: grid;
+  width: 25%;
+  margin-left: 30%;
+}
+
+.modalButton {
+  width: 100px;
+  margin-left: 30px;
+}
+
+.modalButton:hover {
+  transform: translateY(0px);
+}
+
+.modalButton2:hover {
+  transform: translateY(0px);
+}
+
+.modalAlarm button {
+  transform: translateY(0px);
+}
+.timerFontSize {
+  font-size: 3em;
+}
+
+img {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+select,
+button {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 5px;
+  background: #ffc421;
+  border: 2px solid black;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+  transition: 500ms;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+select,
+button:after {
+  content: "";
+  position: absolute;
+  transform: translateX(-55px) translateY(-40px);
+  width: 25px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0px 0px 50px transparent;
+  transition: 500ms;
 }
 
-.App-link {
-  color: #61dafb;
+select {
+  height: 25px;
+}
+select {
+  width: auto;
+  margin-left: 75px;
+  background-color: white;
+  border-radius: 20%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+select,
+button:focus {
+  outline: none;
 }
