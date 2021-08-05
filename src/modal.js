@@ -54,13 +54,27 @@ export default function SimpleModal() {
         }
       }
       if (exist === 0) {
-        customSoundList.push({ name: customName, file: customFile });
+        let customFileCode = googleShareToMP3(customFile);
+        customSoundList.push({
+          name: customName,
+          file: customFileCode === null ? customFile : customFileCode,
+        });
         localStorage.setItem("file", JSON.stringify(customSoundList));
         window.location.reload(true);
       }
     }
   };
 
+  const googleShareToMP3 = () => {
+    var regexGoogleDrive = /drive.google.com/g;
+    var regexGoogleDriveCode = /.*\/([^/]+)\/[^/]+/;
+    if (regexGoogleDrive.exec(customFile)) {
+      let code = regexGoogleDriveCode.exec(customFile);
+      if (code !== null) {
+        return `http://docs.google.com/uc?export=open&id=${code[1]}`;
+      }
+    }
+  };
   const body = (
     <div style={modalStyle} className={classes.paper}>
       <h2 id="simple-modal-title">Konfiguracja licznika</h2>
