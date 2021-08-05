@@ -55,9 +55,10 @@ export default function SimpleModal() {
       }
       if (exist === 0) {
         let customFileCode = googleShareToMP3(customFile);
+        console.log(customFileCode);
         customSoundList.push({
           name: customName,
-          file: customFileCode === null ? customFile : customFileCode,
+          file: customFileCode === undefined ? customFile : customFileCode,
         });
         localStorage.setItem("file", JSON.stringify(customSoundList));
         window.location.reload(true);
