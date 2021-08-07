@@ -46,28 +46,23 @@ export default function RenderSounds() {
 const soundList = [
   {
     sound:
-      "https://www.jp.square-enix.com/music/sem/page/FF7R/ost/assets/mp3/disc1-03.mp3",
-    label: "Bombing mission",
+      "https://www.jp.square-enix.com/music/sem/page/FF7R/ost/assets/mp3/disc3-23.mp3",
+    label: "The Hideout",
   },
   {
     sound:
-      "https://www.jp.square-enix.com/music/sem/page/FF7R/ost/assets/mp3/disc1-04.mp3",
-    label: "Track: 04",
-  },
-  {
-    sound:
-      "https://www.jp.square-enix.com/music/sem/page/FF7R/ost/assets/mp3/disc4-01.mp3",
-    label: "Midnight Rendezvous",
+      "http://docs.google.com/uc?export=open&id=1VimOZ7qLx7nUGCloe_q1Yw0WLCLbzPhb",
+    label: "False Knight",
   },
   {
     sound:
       "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
-    label: "Wtf1",
+    label: "Galaxy Invaders",
   },
   {
     sound:
       "http://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/ateapill.ogg",
-    label: "Wtf2",
+    label: "A tea pill",
   },
 ];
 

@@ -12,7 +12,7 @@ function App() {
   const [isStopped, setIsStopped] = useState(true);
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(Math.floor(startTime / 60));
-  //wywołanie funkcji z każdą zmianą countera
+
   useEffect(() => {
     if (!isStopped) {
       if (counter === startTime - alarmDuration) {
@@ -37,7 +37,7 @@ function App() {
   useEffect(() => {
     counterIntoTime();
   }, [counterIntoTime]);
-  //Zamiana countera na sekundy i minuty
+
   function counterIntoTime() {
     if (counter >= 60) {
       setMinutes(Math.floor(counter / 60));
@@ -48,7 +48,6 @@ function App() {
     }
   }
 
-  //Zatrzymanie czasu spacją
   document.body.onkeyup = function (e) {
     if (e.keyCode === 32) {
       setIsStopped(!isStopped);
